@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://djggn854hjk6d"]
+
+[ext_resource type="Script" uid="uid://ba0a2ua8ynkp3" path="res://scripts/SHMUP.gd" id="1_wf6it"]
+[ext_resource type="PackedScene" uid="uid://pdeno20om6nq" path="res://scenes/ennemieSHMUP.tscn" id="2_1w5xt"]
+[ext_resource type="PackedScene" uid="uid://dq3ufqws1acr2" path="res://scenes/backgroundSHMUP.tscn" id="2_wf6it"]
+[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="3_0y3p6"]
+[ext_resource type="Script" uid="uid://belf42koo4i6g" path="res://scripts/playerSHMUP.gd" id="4_am2v4"]
+[ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/bulletSHMUP.tscn" id="6_0y3p6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nc6m1"]
+size = Vector2(128, 124)
+
+[node name="SHMUP" type="Node2D" unique_id=1058770793]
+script = ExtResource("1_wf6it")
+ennemie_scene = ExtResource("2_1w5xt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1545959630]
+position = Vector2(576, 328)
+
+[node name="BackgroundSHMUP" parent="Camera2D" unique_id=2069217799 instance=ExtResource("2_wf6it")]
+
+[node name="PlayerSHMUP" type="Sprite2D" parent="." unique_id=793833132]
+position = Vector2(140, 328)
+texture = ExtResource("3_0y3p6")
+script = ExtResource("4_am2v4")
+bullet_scene = ExtResource("6_0y3p6")
+
+[node name="Area2D" type="Area2D" parent="PlayerSHMUP" unique_id=1051596637]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSHMUP/Area2D" unique_id=1785172426]
+shape = SubResource("RectangleShape2D_nc6m1")
+
+[node name="Ennemies" type="Node2D" parent="." unique_id=2019038620]
+
+[node name="Bullets" type="Node2D" parent="." unique_id=2073378281]
+
+[connection signal="area_entered" from="PlayerSHMUP/Area2D" to="PlayerSHMUP" method="_on_area_2d_area_entered"]
+
+[editable path="Camera2D/BackgroundSHMUP"]

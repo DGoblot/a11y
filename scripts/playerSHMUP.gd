@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@onready var bullets = $"../Bullets"
+@export var bullet_scene: PackedScene
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
@@ -13,8 +15,16 @@ func _process(delta: float) -> void:
 		velocity.y += 1
 	if Input.is_action_pressed(&"Up"):
 		velocity.y -= 1
+	if Input.is_action_pressed(&"Right"):
+		velocity.x += 1
+	if Input.is_action_pressed(&"Left"):
+		velocity.x -= 1
+	if Input.is_action_just_pressed(&"Shoot"):
+		var bullet = bullet_scene.instantiate()
+		bullet.position = position
+		bullets.add_child(bullet)
 	if Input.is_action_just_pressed(&"Switch"):
-		get_tree().change_scene_to_file("res://scenes/SHMUP.tscn")
+		get_tree().change_scene_to_file("res://scenes/DRIVE.tscn")
 		
 	velocity = velocity.normalized() * speed
 
@@ -23,4 +33,5 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print_debug("aie")
+	if (area.name == "EnnemieArea"):
+		print_debug("aie")

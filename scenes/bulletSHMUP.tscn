@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bpqp1lqgut2jc"]
+
+[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="1_56sf0"]
+[ext_resource type="Script" uid="uid://5qmw4mttg7ix" path="res://scripts/bulletSHMUP.gd" id="2_5qya5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_56sf0"]
+radius = 63.999996
+
+[node name="BulletSHMUP" type="Sprite2D" unique_id=1556264421]
+scale = Vector2(0.171875, 0.171875)
+texture = ExtResource("1_56sf0")
+script = ExtResource("2_5qya5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1992413994]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=92774678]
+shape = SubResource("CircleShape2D_56sf0")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=68089053]
+rect = Rect2(-62.363632, -63.999996, 126.36363, 127.99999)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

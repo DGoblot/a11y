@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ca1w7wk04vorn" path="res://assets/road.png" id="1_bkp1e"]
 
-[node name="BackgroundDrive" type="Node2D" unique_id=2069217799]
+[node name="BackgroundDRIVE" type="Node2D" unique_id=2069217799]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=961169188]
 scroll_offset = Vector2(0, 4)
