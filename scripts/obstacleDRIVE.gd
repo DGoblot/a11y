@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var parallax = $"../../Camera2D/Background/Parallax2D"
+@onready var parallax = $"../../Camera2D/BackgroundDRIVE/Parallax2D"
 var speed
 var screen_size
 

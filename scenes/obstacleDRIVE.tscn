@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ukg5"]
 size = Vector2(128, 128)
 
-[node name="Obstacle" type="Sprite2D" unique_id=1200471782]
+[node name="ObstacleDRIVE" type="Sprite2D" unique_id=1200471782]
 modulate = Color(1, 0, 0, 1)
 texture = ExtResource("1_7ukg5")
 script = ExtResource("2_drdry")
