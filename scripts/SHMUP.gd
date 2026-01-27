@@ -11,13 +11,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	timer += delta
 	if (timer > ennemie_timer): 
-		spawn_ennemie(0,0)
+		spawn_ennemie(0,randi_range(-300,300))
 		timer = 0
 
 func spawn_ennemie(x: float, y: float) -> void:
 	var ennemie = ennemie_scene.instantiate()
-	
-	#obstacle.position = Vector2(x,y)
-	ennemie.position = Vector2(1274,306)
+
+	ennemie.position = Vector2(1274,306+y)
 
 	ennemies.add_child(ennemie)

@@ -11,13 +11,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	timer += delta
 	if (timer > obstacle_timer): 
-		spawn_obstacle(0,0)
+		spawn_obstacle(0,randi_range(-300,300))
 		timer = 0
 
 func spawn_obstacle(x: float, y: float) -> void:
 	var obstacle = obstacle_scene.instantiate()
-	
-	#obstacle.position = Vector2(x,y)
-	obstacle.position = Vector2(1074,306)
+
+	obstacle.position = Vector2(1074,306+y)
 
 	obstacles.add_child(obstacle)

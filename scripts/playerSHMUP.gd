@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 		var bullet = bullet_scene.instantiate()
 		bullet.position = position
 		bullets.add_child(bullet)
-	if Input.is_action_just_pressed(&"Switch"):
+	if Input.is_action_just_released(&"Switch"):
 		get_tree().change_scene_to_file("res://scenes/PLAT.tscn")
 
 	velocity = velocity.normalized() * speed

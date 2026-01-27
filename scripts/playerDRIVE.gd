@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 		velocity.y += 1
 	if Input.is_action_pressed(&"Up"):
 		velocity.y -= 1
-	if Input.is_action_just_pressed(&"Switch"):
+	if Input.is_action_just_released(&"Switch"):
 		get_tree().change_scene_to_file("res://scenes/SHMUP.tscn")
 		
 	velocity = velocity.normalized() * speed
