@@ -18,3 +18,7 @@ func _process(delta: float) -> void:
 
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print_debug("aie")

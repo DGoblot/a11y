@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://de88q44bwo4cv"]
+
+[ext_resource type="Script" uid="uid://ca4nl124itjou" path="res://scripts/DRIVE.gd" id="1_g2hhb"]
+[ext_resource type="PackedScene" uid="uid://cxt27f4kj5o8k" path="res://scenes/obstacleDRIVE.tscn" id="2_5vaav"]
+[ext_resource type="PackedScene" uid="uid://l56h1kepouiy" path="res://scenes/backgroundDRIVE.tscn" id="3_l5ikd"]
+[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="4_jh2jo"]
+[ext_resource type="Script" uid="uid://bkgfurpxq4adi" path="res://scripts/playerDRIVE.gd" id="5_uq5y1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1w5xt"]
+size = Vector2(128, 124)
+
+[node name="DRIVE" type="Node2D" unique_id=1168583214]
+position = Vector2(0, -1)
+script = ExtResource("1_g2hhb")
+obstacle_scene = ExtResource("2_5vaav")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=48228677]
+position = Vector2(576, 328)
+
+[node name="Background" parent="Camera2D" unique_id=2069217799 instance=ExtResource("3_l5ikd")]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1213732951]
+position = Vector2(140, 328)
+texture = ExtResource("4_jh2jo")
+script = ExtResource("5_uq5y1")
+speed = 884
+
+[node name="Area2D" type="Area2D" parent="Player" unique_id=234969869]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=293298769]
+shape = SubResource("RectangleShape2D_1w5xt")
+
+[node name="Obstacles" type="Node2D" parent="." unique_id=55187538]
+
+[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
+
+[editable path="Camera2D/Background"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cxt27f4kj5o8k"]
 
 [ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="1_7ukg5"]
+[ext_resource type="Script" uid="uid://bqtfvj0ro0l7o" path="res://scripts/obstacleDRIVE.gd" id="2_drdry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ukg5"]
 size = Vector2(128, 128)
@@ -8,8 +9,9 @@ size = Vector2(128, 128)
 [node name="Obstacle" type="Sprite2D" unique_id=1200471782]
 modulate = Color(1, 0, 0, 1)
 texture = ExtResource("1_7ukg5")
+script = ExtResource("2_drdry")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1573731891]
+[node name="StaticBody2D" type="Area2D" parent="." unique_id=570462973]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=642948368]
 shape = SubResource("RectangleShape2D_7ukg5")
