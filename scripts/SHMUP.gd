@@ -16,7 +16,5 @@ func _process(delta: float) -> void:
 
 func spawn_ennemie(x: float, y: float) -> void:
 	var ennemie = ennemie_scene.instantiate()
-
 	ennemie.position = Vector2(1274,306+y)
-
 	ennemies.add_child(ennemie)

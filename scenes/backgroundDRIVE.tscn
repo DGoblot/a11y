@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://l56h1kepouiy"]
 
-[ext_resource type="Texture2D" uid="uid://ca1w7wk04vorn" path="res://assets/road.png" id="1_bkp1e"]
+[ext_resource type="Texture2D" uid="uid://dlj1e6ktdoy1x" path="res://assets/ROUTE.png" id="1_noc5f"]
 
 [node name="BackgroundDRIVE" type="Node2D" unique_id=2069217799]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=961169188]
 scroll_offset = Vector2(0, 4)
-repeat_size = Vector2(921, 0)
+repeat_size = Vector2(1545.735, 0)
 autoscroll = Vector2(-500, 0)
-repeat_times = 3
+repeat_times = 2
 ignore_camera_scroll = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1188252442]
-texture = ExtResource("1_bkp1e")
+scale = Vector2(1, 0.66796875)
+texture = ExtResource("1_noc5f")
