@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://l56h1kepouiy"]
 
-[ext_resource type="Texture2D" uid="uid://dlj1e6ktdoy1x" path="res://assets/ROUTE.png" id="1_noc5f"]
+[ext_resource type="Texture2D" uid="uid://3aml6yc8ytwf" path="res://assets/Routvar.png" id="1_noc5f"]
 
 [node name="BackgroundDRIVE" type="Node2D" unique_id=2069217799]
 

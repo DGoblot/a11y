@@ -33,5 +33,8 @@ func _process(delta: float) -> void:
 	position = position.clamp(Vector2.ZERO, screen_size)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	hit.emit()
-	area.get_parent().queue_free()
+	if (area.name == "ObstacleArea"):
+		hit.emit()
+		area.get_parent().queue_free()
+	if (area.name == "FinishArea"):
+		get_tree().change_scene_to_file("res://scenes/SHMUP/SHMUP.tscn")

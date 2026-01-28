@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://de88q44bwo4cv"]
 
-[ext_resource type="Script" uid="uid://ca4nl124itjou" path="res://scripts/DRIVE.gd" id="1_g2hhb"]
-[ext_resource type="PackedScene" uid="uid://cxt27f4kj5o8k" path="res://scenes/obstacleDRIVE.tscn" id="2_5vaav"]
-[ext_resource type="PackedScene" uid="uid://l56h1kepouiy" path="res://scenes/backgroundDRIVE.tscn" id="3_l5ikd"]
+[ext_resource type="Script" uid="uid://ca4nl124itjou" path="res://scripts/DRIVE/DRIVE.gd" id="1_g2hhb"]
+[ext_resource type="PackedScene" uid="uid://cxt27f4kj5o8k" path="res://scenes/DRIVE/obstacleDRIVE.tscn" id="2_5vaav"]
+[ext_resource type="PackedScene" uid="uid://unljr5jovn0n" path="res://scenes/DRIVE/finishDRIVE.tscn" id="3_c7es3"]
+[ext_resource type="PackedScene" uid="uid://l56h1kepouiy" path="res://scenes/DRIVE/backgroundDRIVE.tscn" id="3_l5ikd"]
 [ext_resource type="Texture2D" uid="uid://cfg18gurvqflu" path="res://assets/Voiture.PNG" id="4_g2hhb"]
-[ext_resource type="Script" uid="uid://bkgfurpxq4adi" path="res://scripts/playerDRIVE.gd" id="5_uq5y1"]
+[ext_resource type="Script" uid="uid://bkgfurpxq4adi" path="res://scripts/DRIVE/playerDRIVE.gd" id="5_uq5y1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w5xt"]
 size = Vector2(1564.4443, 881.7783)
@@ -13,6 +14,7 @@ size = Vector2(1564.4443, 881.7783)
 position = Vector2(0, -1)
 script = ExtResource("1_g2hhb")
 obstacle_scene = ExtResource("2_5vaav")
+finish_scene = ExtResource("3_c7es3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=48228677]
 position = Vector2(576, 328)
@@ -29,6 +31,8 @@ script = ExtResource("5_uq5y1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDRIVE/Area2D" unique_id=293298769]
 shape = SubResource("RectangleShape2D_1w5xt")
+
+[node name="Finish" type="Node2D" parent="." unique_id=1325357810]
 
 [node name="Obstacles" type="Node2D" parent="." unique_id=55187538]
 

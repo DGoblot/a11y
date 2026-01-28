@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://cipfjjnfwys0s"]
 
-[ext_resource type="Script" uid="uid://dhsy2gcmw10d7" path="res://scripts/playerPLAT.gd" id="1_8mcqr"]
-[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="2_a5a4d"]
-[ext_resource type="Texture2D" uid="uid://dfjtqykeln06d" path="res://assets/tilemap_packed.png" id="3_a5a4d"]
+[ext_resource type="Script" uid="uid://dhsy2gcmw10d7" path="res://scripts/PLAT/playerPLAT.gd" id="1_kb1t0"]
+[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="2_mfc2s"]
+[ext_resource type="Texture2D" uid="uid://dfjtqykeln06d" path="res://assets/tilemap_packed.png" id="3_58rt4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8mcqr"]
 radius = 25.0
 height = 126.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_12sfd"]
-texture = ExtResource("3_a5a4d")
+texture = ExtResource("3_58rt4")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -86,14 +86,14 @@ position = Vector2(576, 328)
 
 [node name="PlayerPLAT" type="CharacterBody2D" parent="." unique_id=760950186]
 position = Vector2(201, 413)
-script = ExtResource("1_8mcqr")
+script = ExtResource("1_kb1t0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerPLAT" unique_id=273913912]
 shape = SubResource("CapsuleShape2D_8mcqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerPLAT" unique_id=377446808]
 scale = Vector2(0.390625, 1)
-texture = ExtResource("2_a5a4d")
+texture = ExtResource("2_mfc2s")
 
 [node name="LD" type="Node2D" parent="." unique_id=1109804948]
 

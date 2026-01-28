@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpqp1lqgut2jc"]
 
 [ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="1_56sf0"]
-[ext_resource type="Script" uid="uid://5qmw4mttg7ix" path="res://scripts/bulletSHMUP.gd" id="2_5qya5"]
+[ext_resource type="Script" uid="uid://5qmw4mttg7ix" path="res://scripts/SHMUP/bulletSHMUP.gd" id="2_5qya5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_56sf0"]
 radius = 63.999996
