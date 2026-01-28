@@ -15,7 +15,7 @@ script = ExtResource("1_wf6it")
 ennemie_scene = ExtResource("2_1w5xt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1545959630]
-position = Vector2(576, 328)
+position = Vector2(801, 452)
 
 [node name="BackgroundSHMUP" parent="Camera2D" unique_id=2069217799 instance=ExtResource("2_wf6it")]
 

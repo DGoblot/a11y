@@ -12,13 +12,12 @@
 size = Vector2(1564.4443, 881.7783)
 
 [node name="DRIVE" type="Node2D" unique_id=1168583214]
-position = Vector2(0, -1)
 script = ExtResource("1_g2hhb")
 obstacle_scene = ExtResource("2_5vaav")
 finish_scene = ExtResource("3_c7es3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=48228677]
-position = Vector2(576, 328)
+position = Vector2(799, 452)
 
 [node name="BackgroundDRIVE" parent="Camera2D" unique_id=2069217799 instance=ExtResource("3_l5ikd")]
 
@@ -26,7 +25,6 @@ position = Vector2(576, 328)
 position = Vector2(0, -4)
 
 [node name="PlayerDRIVE" type="Sprite2D" parent="." unique_id=1213732951]
-position = Vector2(140, 328)
 scale = Vector2(0.0703125, 0.0703125)
 texture = ExtResource("4_g2hhb")
 script = ExtResource("5_uq5y1")

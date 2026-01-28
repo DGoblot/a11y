@@ -19,11 +19,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if Input.is_action_just_released(&"Switch") and timer > 0.1:
-		get_tree().change_scene_to_file("res://scenes/DRIVE.tscn")
+		get_tree().change_scene_to_file("res://scenes/DRIVE/DRIVE.tscn")
 
 	move_and_slide()
 
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	print_debug("dead")
-	get_tree().change_scene_to_file("res://scenes/PLAT.tscn")
+	get_tree().change_scene_to_file("res://scenes/PLAT/PLAT.tscn")

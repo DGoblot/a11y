@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		bullet.position = position
 		bullets.add_child(bullet)
 	if Input.is_action_just_released(&"Switch"):
-		get_tree().change_scene_to_file("res://scenes/PLAT.tscn")
+		get_tree().change_scene_to_file("res://scenes/PLAT/PLAT.tscn")
 
 	velocity = velocity.normalized() * speed
 
