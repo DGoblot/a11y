@@ -7,7 +7,7 @@ extends Node2D
 @export var finish_scene: PackedScene
 @export var obstacle_time = 1
 var obstacle_timer = 0
-@export var finish_time = 4
+@export var finish_time = 10
 var finish_timer = 0
 var done = false
 
@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	
 	obstacle_timer += delta * (speed/1000)
 	if (obstacle_timer > obstacle_time and !done): 
-		if(randi_range(0,4)):
+		if(!randi_range(0,4)):
 			var missing_lane = randi_range(0,2)
 			match missing_lane:
 				0:
