@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://l56h1kepouiy" path="res://scenes/DRIVE/backgroundDRIVE.tscn" id="3_l5ikd"]
 [ext_resource type="Texture2D" uid="uid://cfg18gurvqflu" path="res://assets/Voiture.PNG" id="4_g2hhb"]
 [ext_resource type="Script" uid="uid://bkgfurpxq4adi" path="res://scripts/DRIVE/playerDRIVE.gd" id="5_uq5y1"]
+[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="7_pr0uw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w5xt"]
 size = Vector2(1564.4443, 881.7783)
@@ -21,6 +22,9 @@ position = Vector2(576, 328)
 
 [node name="BackgroundDRIVE" parent="Camera2D" unique_id=2069217799 instance=ExtResource("3_l5ikd")]
 
+[node name="Sprite2D" parent="Camera2D/BackgroundDRIVE/Parallax2D" parent_id_path=PackedInt32Array(2069217799, 961169188) index="0" unique_id=1188252442]
+position = Vector2(0, -4)
+
 [node name="PlayerDRIVE" type="Sprite2D" parent="." unique_id=1213732951]
 position = Vector2(140, 328)
 scale = Vector2(0.0703125, 0.0703125)
@@ -31,6 +35,16 @@ script = ExtResource("5_uq5y1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDRIVE/Area2D" unique_id=293298769]
 shape = SubResource("RectangleShape2D_1w5xt")
+
+[node name="UpArrow" type="Sprite2D" parent="PlayerDRIVE" unique_id=853752735]
+position = Vector2(127.99997, -938.6666)
+scale = Vector2(4.6377954, 4.6377954)
+texture = ExtResource("7_pr0uw")
+
+[node name="DownArrow" type="Sprite2D" parent="PlayerDRIVE" unique_id=887612098]
+position = Vector2(128, 952.8892)
+scale = Vector2(4.6377954, 4.6377954)
+texture = ExtResource("7_pr0uw")
 
 [node name="Finish" type="Node2D" parent="." unique_id=1325357810]
 

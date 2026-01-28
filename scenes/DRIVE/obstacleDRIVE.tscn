@@ -1,19 +1,20 @@
 [gd_scene format=3 uid="uid://cxt27f4kj5o8k"]
 
-[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="1_7ukg5"]
+[ext_resource type="Texture2D" uid="uid://c4t05qqi2hlqu" path="res://assets/Pic.png" id="1_7d7qs"]
 [ext_resource type="Script" uid="uid://bqtfvj0ro0l7o" path="res://scripts/DRIVE/obstacleDRIVE.gd" id="2_drdry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ukg5"]
-size = Vector2(128, 128)
+size = Vector2(1000, 1425)
 
 [node name="ObstacleDRIVE" type="Sprite2D" unique_id=1200471782]
-modulate = Color(1, 0, 0, 1)
-texture = ExtResource("1_7ukg5")
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_7d7qs")
 script = ExtResource("2_drdry")
 
 [node name="ObstacleArea" type="Area2D" parent="." unique_id=570462973]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleArea" unique_id=642948368]
+position = Vector2(-200, 0)
 shape = SubResource("RectangleShape2D_7ukg5")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1950899135]

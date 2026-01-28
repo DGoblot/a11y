@@ -5,6 +5,8 @@ extends Sprite2D
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
+var hp = 3
+
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
@@ -30,6 +32,9 @@ func _process(delta: float) -> void:
 
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
+	if (hp <= 0):
+		get_tree().change_scene_to_file("res://scenes/SHMUP/SHMUP.tscn")
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

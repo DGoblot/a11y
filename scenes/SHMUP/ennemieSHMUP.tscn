@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="1_uypo1"]
 [ext_resource type="Script" uid="uid://cai74dmflnm4s" path="res://scripts/SHMUP/ennemieSHMUP.gd" id="2_0chwu"]
+[ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/SHMUP/bulletSHMUP.tscn" id="3_t2uhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ukg5"]
 size = Vector2(128, 128)
@@ -10,6 +11,7 @@ size = Vector2(128, 128)
 modulate = Color(1, 0, 0, 1)
 texture = ExtResource("1_uypo1")
 script = ExtResource("2_0chwu")
+bullet_scene = ExtResource("3_t2uhr")
 
 [node name="EnnemieArea" type="Area2D" parent="." unique_id=570462973]
 
