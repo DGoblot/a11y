@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/SHMUP/bulletSHMUP.tscn" id="6_0y3p6"]
 [ext_resource type="Texture2D" uid="uid://cyaclfbbnq11c" path="res://assets/Keur vide ui.png" id="7_xmyqv"]
 [ext_resource type="Texture2D" uid="uid://ceeymascht6e6" path="res://assets/Keur ui.png" id="8_idd0a"]
+[ext_resource type="PackedScene" uid="uid://dnxrhmna8si1e" path="res://scenes/SHMUP/PauseSHMUP.tscn" id="10_cxlib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nc6m1"]
 size = Vector2(128, 124)
@@ -85,6 +86,13 @@ offset_right = 700.0
 offset_bottom = 140.0
 texture = ExtResource("8_idd0a")
 expand_mode = 1
+
+[node name="Pause" parent="." unique_id=1264044334 instance=ExtResource("10_cxlib")]
+visible = false
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 1600.0
+offset_bottom = 905.0
 
 [connection signal="area_entered" from="PlayerSHMUP/PlayerArea" to="PlayerSHMUP" method="_on_area_2d_area_entered"]
 

@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://yvqb46odw5qe"]
+
+[ext_resource type="Script" uid="uid://cvuncnfyuwucd" path="res://scripts/pause.gd" id="1_bqtgv"]
+[ext_resource type="Script" uid="uid://diyhxon24gkli" path="res://scripts/remap_button.gd" id="2_5dwxi"]
+
+[node name="Pause" type="Control" unique_id=1264044334]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bqtgv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=445196180]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1119421711]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -670.0
+offset_top = -368.0
+offset_right = 670.0
+offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=432988007]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1656922917]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 80
+text = "Up"
+
+[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=455665479]
+layout_mode = 2
+size_flags_horizontal = 8
+script = ExtResource("2_5dwxi")
+action = "Up"
+metadata/_custom_type_script = "uid://diyhxon24gkli"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=205703466]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 2
+
+[node name="Down" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=495148471]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 80
+text = "Down"
+
+[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=33069487]
+layout_mode = 2
+size_flags_horizontal = 8
+script = ExtResource("2_5dwxi")
+action = "Down"
+metadata/_custom_type_script = "uid://diyhxon24gkli"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=109561754]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=681990032]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 80
+text = "One Button Input"
+
+[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1467239457]
+layout_mode = 2
+size_flags_horizontal = 8
+script = ExtResource("2_5dwxi")
+action = "OneButtonMode"
+metadata/_custom_type_script = "uid://diyhxon24gkli"
