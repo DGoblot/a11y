@@ -43,13 +43,13 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 80
-text = "Up"
+text = "Left"
 
 [node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=455665479]
 layout_mode = 2
 size_flags_horizontal = 8
 script = ExtResource("2_5dwxi")
-action = "Up"
+action = "Left"
 metadata/_custom_type_script = "uid://diyhxon24gkli"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=205703466]
@@ -63,13 +63,13 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 80
-text = "Down"
+text = "Right"
 
 [node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=33069487]
 layout_mode = 2
 size_flags_horizontal = 8
 script = ExtResource("2_5dwxi")
-action = "Down"
+action = "Right"
 metadata/_custom_type_script = "uid://diyhxon24gkli"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=109561754]
@@ -83,11 +83,11 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 80
-text = "One Button Input"
+text = "Jump"
 
 [node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1467239457]
 layout_mode = 2
 size_flags_horizontal = 8
 script = ExtResource("2_5dwxi")
-action = "OneButtonMode"
+action = "Jump"
 metadata/_custom_type_script = "uid://diyhxon24gkli"
