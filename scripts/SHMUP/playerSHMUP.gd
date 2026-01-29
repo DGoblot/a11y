@@ -1,11 +1,14 @@
 extends Sprite2D
 
+@onready var ui = $"../UI"
+@export var keur_vide_texture: Texture2D
 @onready var bullets = $"../Bullets"
 @export var bullet_scene: PackedScene
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
-var hp = 3
+var last_hp = 5
+var hp = 5
 
 
 func _ready() -> void:
@@ -35,8 +38,15 @@ func _process(delta: float) -> void:
 	
 	if (hp <= 0):
 		get_tree().change_scene_to_file("res://scenes/SHMUP/SHMUP.tscn")
+		
+	if (hp != last_hp):
+		ui.get_child(last_hp-1).texture = keur_vide_texture
+		last_hp = hp
+		
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.name == "EnnemieArea"):
 		print_debug("aie")
+	if (area.name == "FinishArea"):
+		get_tree().change_scene_to_file("res://scenes/PLAT/PLAT.tscn")

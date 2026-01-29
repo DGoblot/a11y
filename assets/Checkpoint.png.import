@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfjtqykeln06d"
-path="res://.godot/imported/tilemap_packed.png-bc35c6a04993103d475a218761ed55b4.ctex"
+uid="uid://du0y32k3akr5e"
+path="res://.godot/imported/Checkpoint.png-aa4d21df65c41cb1ee847e5893c3aad0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilemap_packed.png"
-dest_files=["res://.godot/imported/tilemap_packed.png-bc35c6a04993103d475a218761ed55b4.ctex"]
+source_file="res://assets/Checkpoint.png"
+dest_files=["res://.godot/imported/Checkpoint.png-aa4d21df65c41cb1ee847e5893c3aad0.ctex"]
 
 [params]
 

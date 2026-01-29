@@ -27,3 +27,7 @@ func _physics_process(delta: float) -> void:
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	print_debug("dead")
 	get_tree().change_scene_to_file("res://scenes/PLAT/PLAT.tscn")
+
+
+func _on_finish_area_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scenes/DRIVE/DRIVE.tscn")

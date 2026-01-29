@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bvcwmjxf7074o"]
+
+[ext_resource type="Texture2D" uid="uid://cx2ljxdt4160g" path="res://assets/Maison.png" id="1_6uahk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_co3we"]
+size = Vector2(646.7369, 772.49133)
+
+[node name="FinishPlat" type="Sprite2D" unique_id=138341825]
+scale = Vector2(0.05566406, 0.05566406)
+texture = ExtResource("1_6uahk")
+
+[node name="FinishArea" type="Area2D" parent="." unique_id=1885524117]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishArea" unique_id=1916802612]
+position = Vector2(-107.78947, 494.03525)
+shape = SubResource("RectangleShape2D_co3we")
