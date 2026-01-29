@@ -42,92 +42,107 @@ alignment = 2
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.9764706, 0, 0, 1)
+theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 80
 text = "Up"
 
 [node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=455665479]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 50
 script = ExtResource("2_3vmdp")
 action = "Up"
 metadata/_custom_type_script = "uid://diyhxon24gkli"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=205703466]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1551277330]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 2
 
-[node name="Down" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=495148471]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=26487112]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.9764706, 0, 0, 1)
+theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 80
 text = "Down"
 
-[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=33069487]
+[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1228533122]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 50
 script = ExtResource("2_3vmdp")
 action = "Down"
 metadata/_custom_type_script = "uid://diyhxon24gkli"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=109561754]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1761735640]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=681990032]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=995007221]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.9764706, 0, 0, 1)
+theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 80
 text = "Left"
 
-[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1467239457]
+[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=2112748266]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 50
 script = ExtResource("2_3vmdp")
 action = "Left"
 metadata/_custom_type_script = "uid://diyhxon24gkli"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=160080907]
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=204023520]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=655628720]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=366630389]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.9764706, 0, 0, 1)
+theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 80
 text = "Right"
 
-[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=837893384]
+[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1189566333]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 50
 script = ExtResource("2_3vmdp")
 action = "Right"
 metadata/_custom_type_script = "uid://diyhxon24gkli"
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=352508727]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=2095041902]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5" unique_id=400165574]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5" unique_id=1724884307]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.9764706, 0, 0, 1)
+theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 80
 text = "Shoot"
 
-[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=2048671480]
+[node name="RemapButton" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=1852895059]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 50
 script = ExtResource("2_3vmdp")
 action = "Shoot"
 metadata/_custom_type_script = "uid://diyhxon24gkli"

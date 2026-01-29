@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://l56h1kepouiy" path="res://scenes/DRIVE/backgroundDRIVE.tscn" id="3_l5ikd"]
 [ext_resource type="Texture2D" uid="uid://cfg18gurvqflu" path="res://assets/Voiture.PNG" id="4_g2hhb"]
 [ext_resource type="Script" uid="uid://bkgfurpxq4adi" path="res://scripts/DRIVE/playerDRIVE.gd" id="5_uq5y1"]
-[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="7_pr0uw"]
+[ext_resource type="Texture2D" uid="uid://d2jc5qs5tamm4" path="res://assets/Flèche .png" id="7_grsti"]
 [ext_resource type="PackedScene" uid="uid://6fqxo167meal" path="res://scenes/DRIVE/PauseDRIVE.tscn" id="8_grsti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w5xt"]
@@ -37,13 +37,15 @@ shape = SubResource("RectangleShape2D_1w5xt")
 
 [node name="UpArrow" type="Sprite2D" parent="PlayerDRIVE" unique_id=853752735]
 position = Vector2(127.99997, -938.6666)
-scale = Vector2(4.6377954, 4.6377954)
-texture = ExtResource("7_pr0uw")
+rotation = -1.5707964
+scale = Vector2(0.41666663, 0.41666642)
+texture = ExtResource("7_grsti")
 
 [node name="DownArrow" type="Sprite2D" parent="PlayerDRIVE" unique_id=887612098]
 position = Vector2(128, 952.8892)
-scale = Vector2(4.6377954, 4.6377954)
-texture = ExtResource("7_pr0uw")
+rotation = 1.5707964
+scale = Vector2(0.417, 0.417)
+texture = ExtResource("7_grsti")
 
 [node name="Finish" type="Node2D" parent="." unique_id=1325357810]
 
