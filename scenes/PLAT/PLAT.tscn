@@ -104,26 +104,28 @@ position = Vector2(716, 1180)
 position = Vector2(2907, -148)
 shape = SubResource("RectangleShape2D_a5a4d")
 
-[node name="Trampoline" type="Sprite2D" parent="LD" unique_id=1394798368]
+[node name="TrampolineNodes" type="Node2D" parent="LD" unique_id=1297106459]
+
+[node name="Trampoline" type="Sprite2D" parent="LD/TrampolineNodes" unique_id=1394798368]
 position = Vector2(297.00003, 567)
 scale = Vector2(0.08951855, 0.08951855)
 texture = ExtResource("6_h6hl6")
 
-[node name="TrampArea" type="Area2D" parent="LD/Trampoline" unique_id=958403362]
+[node name="TrampArea" type="Area2D" parent="LD/TrampolineNodes/Trampoline" unique_id=958403362]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LD/Trampoline/TrampArea" unique_id=195334448]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LD/TrampolineNodes/Trampoline/TrampArea" unique_id=195334448]
 position = Vector2(-0.00024414063, 122.879395)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_h6hl6")
 
-[node name="Trampoline2" type="Sprite2D" parent="LD" unique_id=636061859]
+[node name="Trampoline2" type="Sprite2D" parent="LD/TrampolineNodes" unique_id=636061859]
 position = Vector2(735, 209.00006)
 scale = Vector2(0.08951855, 0.08951855)
 texture = ExtResource("6_h6hl6")
 
-[node name="TrampArea" type="Area2D" parent="LD/Trampoline2" unique_id=1033417253]
+[node name="TrampArea" type="Area2D" parent="LD/TrampolineNodes/Trampoline2" unique_id=1033417253]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LD/Trampoline2/TrampArea" unique_id=814025986]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LD/TrampolineNodes/Trampoline2/TrampArea" unique_id=814025986]
 position = Vector2(-0.00024414063, 122.879395)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_h6hl6")
