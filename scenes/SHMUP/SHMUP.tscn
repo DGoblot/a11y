@@ -18,6 +18,7 @@ size = Vector2(128, 124)
 script = ExtResource("1_wf6it")
 ennemie_scene = ExtResource("2_1w5xt")
 finish_scene = ExtResource("3_h2vs3")
+ennemie_time = 2.0
 finish_time = 30
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1545959630]
