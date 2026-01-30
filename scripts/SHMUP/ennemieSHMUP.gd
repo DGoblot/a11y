@@ -10,6 +10,8 @@ var bullet_time = false
 @export var shooting_time = 1.5
 var shooting_timer = 1
 
+@onready var sound_shoot = $EnnemieShoot
+
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 
@@ -24,15 +26,16 @@ func _process(delta: float) -> void:
 		shooting_timer += delta
 		if(shooting_timer >= shooting_time):
 			if player.position.x + 100 < position.x:
+				sound_shoot.play()
 				var bullet = bullet_scene.instantiate()
 				bullet.position = position
 				bullet.dir = player.position - position
 				bullet.target = "PlayerArea"
 				get_tree().get_root().get_node("SHMUP/Bullets").add_child(bullet)
 			shooting_timer = 0
-	
+
 	if (hp <= 0):
 		queue_free()
-		
+
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

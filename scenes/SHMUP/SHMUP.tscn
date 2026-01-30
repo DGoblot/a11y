@@ -40,6 +40,10 @@ speed = 500
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSHMUP/PlayerArea" unique_id=1785172426]
 shape = SubResource("RectangleShape2D_nc6m1")
 
+[node name="FmodListener2D" type="FmodListener2D" parent="PlayerSHMUP" unique_id=1463266231]
+position = Vector2(-2661.6604, -3667.1765)
+scale = Vector2(7.393501, 7.393501)
+
 [node name="Ennemies" type="Node2D" parent="." unique_id=2019038620]
 
 [node name="Bullets" type="Node2D" parent="." unique_id=2073378281]
@@ -97,6 +101,13 @@ offset_left = 3.0
 offset_top = 3.0
 offset_right = 1600.0
 offset_bottom = 905.0
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1701410326]
+bank_paths = ["res://assets/Banks/Desktop/Master.strings.bank", "res://assets/Banks/Desktop/Master.bank"]
+
+[node name="PlayerShoot" type="FmodEventEmitter2D" parent="." unique_id=1810314137]
+event_name = "event:/SHMUP/Ally_Shoot"
+event_guid = "{4836925f-440e-494d-83f8-1635fc5dd0cc}"
 
 [connection signal="area_entered" from="PlayerSHMUP/PlayerArea" to="PlayerSHMUP" method="_on_area_2d_area_entered"]
 

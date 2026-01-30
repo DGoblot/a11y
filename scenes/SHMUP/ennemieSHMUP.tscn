@@ -25,4 +25,8 @@ position = Vector2(0, -4.7683716e-07)
 scale = Vector2(0.10546876, 0.10546876)
 texture = ExtResource("4_s3cc3")
 
+[node name="EnnemieShoot" type="FmodEventEmitter2D" parent="." unique_id=468528146]
+event_name = "event:/SHMUP/Ennemy_Shoot"
+event_guid = "{33fa2ea7-01c1-44da-9697-618619f7d52f}"
+
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

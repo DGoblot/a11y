@@ -7,6 +7,8 @@ extends Sprite2D
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
+@onready var sound_shoot = $"../PlayerShoot"
+
 var last_hp = 5
 var hp = 5
 
@@ -25,6 +27,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed(&"Left"):
 		velocity.x -= 1
 	if Input.is_action_just_pressed(&"Shoot"):
+		sound_shoot.play()
 		var bullet = bullet_scene.instantiate()
 		bullet.position = position
 		bullet.dir = Vector2(1,0)

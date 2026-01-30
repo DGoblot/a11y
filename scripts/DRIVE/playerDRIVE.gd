@@ -8,6 +8,10 @@ var dir = "down"
 @onready var up_arrow = $UpArrow
 var screen_size
 
+@onready var sound_error = $"../Error"
+@onready var sound_move = $"../Move"
+@onready var sound_obstacle = $"../Obstacle"
+
 var one_button_mode = false
 
 signal hit
@@ -27,17 +31,25 @@ func _process(delta: float) -> void:
 		if (position == pos_high):
 			position = pos_middle
 			dir = "down"
-		else :if (position == pos_middle):
+			sound_move.play()
+		elif (position == pos_middle):
 			position = pos_low
 			dir = "up"
+			sound_move.play()
+		else:
+			sound_error.play()
 		
 	if Input.is_action_just_pressed(&"Up") and !one_button_mode:
 		if (position == pos_low): 
 			position = pos_middle
 			dir = "up"
-		else :if (position == pos_middle): 
+			sound_move.play()
+		elif (position == pos_middle): 
 			position = pos_high
 			dir = "down"
+			sound_move.play()
+		else:
+			sound_error.play()
 		
 	if Input.is_action_just_pressed(&"SwitchOneButtonMode"):
 		if one_button_mode:
@@ -54,6 +66,7 @@ func _process(delta: float) -> void:
 					up_arrow.self_modulate.a = 1
 	
 	if Input.is_action_just_pressed(&"OneButtonMode") and one_button_mode:
+		sound_move.play()
 		match position:
 			pos_high: 
 				position = pos_middle
@@ -80,6 +93,13 @@ func _process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.name == "ObstacleArea"):
 		hit.emit()
+		#if position == pos_low:
+			#
+		#elif position == pos_middle:
+			#
+		#else:
+			
+		sound_obstacle.play()
 		area.get_parent().queue_free()
 	if (area.name == "FinishArea"):
 		get_tree().change_scene_to_file("res://scenes/STORY/story3.tscn")
