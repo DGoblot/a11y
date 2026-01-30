@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if Input.is_action_just_released(&"Switch") and timer > 0.1:
-		get_tree().change_scene_to_file("res://scenes/DRIVE/DRIVE.tscn")
+		get_tree().change_scene_to_file("res://scenes/STORY/story6.tscn")
 
 	move_and_slide()
 	
@@ -34,7 +34,7 @@ func _on_death_zone_body_entered(body: Node2D) -> void:
 
 func _on_finish_area_body_entered(body: Node2D) -> void:
 	if body.name == "PlayerPLAT":
-		get_tree().change_scene_to_file("res://scenes/DRIVE/DRIVE.tscn")
+		get_tree().change_scene_to_file("res://scenes/STORY/story6.tscn")
 
 
 func _on_trampoline_detector_area_entered(area: Area2D) -> void:

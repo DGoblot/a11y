@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 		bullet.dir = Vector2(1,0)
 		bullets.add_child(bullet)
 	if Input.is_action_just_released(&"Switch"):
-		get_tree().change_scene_to_file("res://scenes/PLAT/PLAT.tscn")
+		get_tree().change_scene_to_file("res://scenes/STORY/story5.tscn")
 
 	velocity = velocity.normalized() * speed
 
@@ -50,4 +50,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.name == "EnnemieArea"):
 		print_debug("aie")
 	if (area.name == "FinishArea"):
-		get_tree().change_scene_to_file("res://scenes/PLAT/PLAT.tscn")
+		get_tree().change_scene_to_file("res://scenes/STORY/story5.tscn")

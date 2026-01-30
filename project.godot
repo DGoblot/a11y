@@ -15,7 +15,7 @@ General/banks_path="res://assets/Banks/Desktop"
 [application]
 
 config/name="A11Y"
-run/main_scene="uid://de88q44bwo4cv"
+run/main_scene="uid://jaobnrsvedas"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
