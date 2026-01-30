@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq3ufqws1acr2"]
 
-[ext_resource type="Texture2D" uid="uid://n2fk82oh8qxd" path="res://assets/sky.png" id="1_rpnq8"]
+[ext_resource type="Texture2D" uid="uid://dgy35g7617t4" path="res://assets/Fond espace.png" id="1_ivv64"]
 
 [node name="BackgroundSHMUP" type="Node2D" unique_id=2069217799]
 
@@ -12,4 +12,6 @@ repeat_times = 3
 ignore_camera_scroll = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1188252442]
-texture = ExtResource("1_rpnq8")
+position = Vector2(0, -4)
+scale = Vector2(0.51953125, 0.51953125)
+texture = ExtResource("1_ivv64")

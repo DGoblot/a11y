@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://ba0a2ua8ynkp3" path="res://scripts/SHMUP/SHMUP.gd" id="1_wf6it"]
 [ext_resource type="PackedScene" uid="uid://pdeno20om6nq" path="res://scenes/SHMUP/ennemieSHMUP.tscn" id="2_1w5xt"]
 [ext_resource type="PackedScene" uid="uid://dq3ufqws1acr2" path="res://scenes/SHMUP/backgroundSHMUP.tscn" id="2_wf6it"]
-[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="3_0y3p6"]
 [ext_resource type="PackedScene" uid="uid://c0ernq2gjw0t" path="res://scenes/SHMUP/finishSHMUP.tscn" id="3_h2vs3"]
 [ext_resource type="Script" uid="uid://belf42koo4i6g" path="res://scripts/SHMUP/playerSHMUP.gd" id="4_am2v4"]
+[ext_resource type="Texture2D" uid="uid://dajeomjjrr8wj" path="res://assets/Vaisseau.PNG" id="5_cxlib"]
 [ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/SHMUP/bulletSHMUP.tscn" id="6_0y3p6"]
 [ext_resource type="Texture2D" uid="uid://cyaclfbbnq11c" path="res://assets/Keur vide ui.png" id="7_xmyqv"]
 [ext_resource type="Texture2D" uid="uid://ceeymascht6e6" path="res://assets/Keur ui.png" id="8_idd0a"]
@@ -25,8 +25,9 @@ position = Vector2(801, 452)
 [node name="BackgroundSHMUP" parent="Camera2D" unique_id=2069217799 instance=ExtResource("2_wf6it")]
 
 [node name="PlayerSHMUP" type="Sprite2D" parent="." unique_id=793833132]
-position = Vector2(140, 328)
-texture = ExtResource("3_0y3p6")
+position = Vector2(360, 496)
+scale = Vector2(0.13525392, 0.13525392)
+texture = ExtResource("5_cxlib")
 script = ExtResource("4_am2v4")
 keur_vide_texture = ExtResource("7_xmyqv")
 bullet_scene = ExtResource("6_0y3p6")

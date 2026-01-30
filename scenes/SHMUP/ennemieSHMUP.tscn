@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://pdeno20om6nq"]
 
-[ext_resource type="Texture2D" uid="uid://dqcve5uc3f6uw" path="res://icon.svg" id="1_uypo1"]
 [ext_resource type="Script" uid="uid://cai74dmflnm4s" path="res://scripts/SHMUP/ennemieSHMUP.gd" id="2_0chwu"]
 [ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/SHMUP/bulletSHMUP.tscn" id="3_t2uhr"]
+[ext_resource type="Texture2D" uid="uid://bqa7fmwfek2i1" path="res://assets/Monstre.png" id="4_s3cc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ukg5"]
 size = Vector2(128, 128)
 
 [node name="EnnemieSHMUP" type="Sprite2D" unique_id=1200471782]
-modulate = Color(1, 0, 0, 1)
-texture = ExtResource("1_uypo1")
 script = ExtResource("2_0chwu")
 bullet_scene = ExtResource("3_t2uhr")
 
@@ -20,5 +18,10 @@ shape = SubResource("RectangleShape2D_7ukg5")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1744204361]
 rect = Rect2(-76, -75, 152, 150)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2000270355]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(0.10546876, 0.10546876)
+texture = ExtResource("4_s3cc3")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
