@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bkgfurpxq4adi" path="res://scripts/DRIVE/playerDRIVE.gd" id="5_uq5y1"]
 [ext_resource type="Texture2D" uid="uid://d2jc5qs5tamm4" path="res://assets/Flèche .png" id="7_grsti"]
 [ext_resource type="PackedScene" uid="uid://6fqxo167meal" path="res://scenes/DRIVE/PauseDRIVE.tscn" id="8_grsti"]
+[ext_resource type="AudioStream" uid="uid://bijoau216yd2" path="res://assets/DAVIDJTM.wav" id="9_6v0gy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w5xt"]
 size = Vector2(1564.4443, 881.7783)
@@ -52,6 +53,9 @@ rotation = 1.5707964
 scale = Vector2(0.417, 0.417)
 texture = ExtResource("7_grsti")
 
+[node name="FmodListener2D" type="FmodListener2D" parent="PlayerDRIVE" unique_id=81817780]
+scale = Vector2(14.222222, 14.222222)
+
 [node name="Finish" type="Node2D" parent="." unique_id=1325357810]
 
 [node name="Obstacles" type="Node2D" parent="." unique_id=55187538]
@@ -62,6 +66,26 @@ offset_left = -3.0
 offset_top = 6.0
 offset_right = 1595.0
 offset_bottom = 897.0
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1902770210]
+bank_paths = ["res://assets/Banks/Desktop/Master.bank", "res://assets/Banks/Desktop/Master.strings.bank"]
+
+[node name="Obstacle" type="FmodEventEmitter2D" parent="." unique_id=383453681]
+event_name = "event:/Course/Obstacle"
+event_guid = "{05928bd5-08c4-4739-b6bd-f03f7063d5db}"
+
+[node name="Move" type="FmodEventEmitter2D" parent="." unique_id=1072799306]
+event_name = "event:/Course/Spaceship_Moov"
+event_guid = "{7388fa78-b9c5-4745-a254-3f4f1e66ba0e}"
+
+[node name="Error" type="FmodEventEmitter2D" parent="." unique_id=438254785]
+event_name = "event:/Course/Error_Lane"
+event_guid = "{308b5fc7-c224-4c6b-86f8-128097e118db}"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=956130424]
+stream = ExtResource("9_6v0gy")
+volume_db = -4.0
+autoplay = true
 
 [connection signal="hit" from="PlayerDRIVE" to="." method="_on_player_drive_hit"]
 [connection signal="area_entered" from="PlayerDRIVE/Area2D" to="PlayerDRIVE" method="_on_area_2d_area_entered"]

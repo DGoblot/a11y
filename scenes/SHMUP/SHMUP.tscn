@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cyaclfbbnq11c" path="res://assets/Keur vide ui.png" id="7_xmyqv"]
 [ext_resource type="Texture2D" uid="uid://ceeymascht6e6" path="res://assets/Keur ui.png" id="8_idd0a"]
 [ext_resource type="PackedScene" uid="uid://dnxrhmna8si1e" path="res://scenes/SHMUP/PauseSHMUP.tscn" id="10_cxlib"]
+[ext_resource type="AudioStream" uid="uid://bijoau216yd2" path="res://assets/DAVIDJTM.wav" id="11_fe4fw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nc6m1"]
 size = Vector2(128, 124)
@@ -108,6 +109,11 @@ bank_paths = ["res://assets/Banks/Desktop/Master.strings.bank", "res://assets/Ba
 [node name="PlayerShoot" type="FmodEventEmitter2D" parent="." unique_id=1810314137]
 event_name = "event:/SHMUP/Ally_Shoot"
 event_guid = "{4836925f-440e-494d-83f8-1635fc5dd0cc}"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=264586894]
+stream = ExtResource("11_fe4fw")
+volume_db = -4.0
+autoplay = true
 
 [connection signal="area_entered" from="PlayerSHMUP/PlayerArea" to="PlayerSHMUP" method="_on_area_2d_area_entered"]
 
