@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pdeno20om6nq"]
 
 [ext_resource type="Script" uid="uid://cai74dmflnm4s" path="res://scripts/SHMUP/ennemieSHMUP.gd" id="2_0chwu"]
-[ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/SHMUP/bulletSHMUP.tscn" id="3_t2uhr"]
+[ext_resource type="PackedScene" uid="uid://dx2mpk27x8vsa" path="res://scenes/SHMUP/bulletEnnemieSHMUP.tscn" id="2_t2uhr"]
 [ext_resource type="Texture2D" uid="uid://bqa7fmwfek2i1" path="res://assets/Monstre.png" id="4_s3cc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ukg5"]
@@ -9,7 +9,7 @@ size = Vector2(128, 128)
 
 [node name="EnnemieSHMUP" type="Sprite2D" unique_id=1200471782]
 script = ExtResource("2_0chwu")
-bullet_scene = ExtResource("3_t2uhr")
+bullet_scene = ExtResource("2_t2uhr")
 
 [node name="EnnemieArea" type="Area2D" parent="." unique_id=570462973]
 

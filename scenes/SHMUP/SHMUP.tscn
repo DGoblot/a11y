@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c0ernq2gjw0t" path="res://scenes/SHMUP/finishSHMUP.tscn" id="3_h2vs3"]
 [ext_resource type="Script" uid="uid://belf42koo4i6g" path="res://scripts/SHMUP/playerSHMUP.gd" id="4_am2v4"]
 [ext_resource type="Texture2D" uid="uid://dajeomjjrr8wj" path="res://assets/Vaisseau.PNG" id="5_cxlib"]
-[ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/SHMUP/bulletSHMUP.tscn" id="6_0y3p6"]
+[ext_resource type="PackedScene" uid="uid://bpqp1lqgut2jc" path="res://scenes/SHMUP/bulletPlayerSHMUP.tscn" id="6_0y3p6"]
 [ext_resource type="Texture2D" uid="uid://cyaclfbbnq11c" path="res://assets/Keur vide ui.png" id="7_xmyqv"]
 [ext_resource type="Texture2D" uid="uid://ceeymascht6e6" path="res://assets/Keur ui.png" id="8_idd0a"]
 [ext_resource type="PackedScene" uid="uid://dnxrhmna8si1e" path="res://scenes/SHMUP/PauseSHMUP.tscn" id="10_cxlib"]
