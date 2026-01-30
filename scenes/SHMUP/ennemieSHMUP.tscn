@@ -10,6 +10,7 @@ size = Vector2(128, 128)
 [node name="EnnemieSHMUP" type="Sprite2D" unique_id=1200471782]
 script = ExtResource("2_0chwu")
 bullet_scene = ExtResource("2_t2uhr")
+hp = 3
 
 [node name="EnnemieArea" type="Area2D" parent="." unique_id=570462973]
 

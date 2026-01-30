@@ -7,7 +7,8 @@
 radius = 691.01514
 
 [node name="BulletSHMUP" type="Sprite2D" unique_id=1556264421]
-scale = Vector2(0.08398437, 0.08398437)
+position = Vector2(-1.9073486e-06, 1.9073486e-06)
+scale = Vector2(0.06152343, 0.06152343)
 texture = ExtResource("1_w1k1g")
 script = ExtResource("2_hovpn")
 

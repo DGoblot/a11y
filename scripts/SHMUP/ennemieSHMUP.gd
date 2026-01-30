@@ -5,10 +5,10 @@ extends Sprite2D
 @onready var player = $"../../PlayerSHMUP"
 var speed
 var screen_size
-var hp = 2
+@export var hp = 2
 var bullet_time = false
-@export var shooting_time = 1
-var shooting_timer = 0
+@export var shooting_time = 1.5
+var shooting_timer = 1
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
