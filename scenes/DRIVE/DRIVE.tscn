@@ -16,6 +16,10 @@ size = Vector2(1564.4443, 881.7783)
 script = ExtResource("1_g2hhb")
 obstacle_scene = ExtResource("2_5vaav")
 finish_scene = ExtResource("3_c7es3")
+obstacle_time = 2
+finish_time = 45
+goal_speed = 1200.0
+lerp_speed = 0.005
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=48228677]
 position = Vector2(799, 452)
