@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://unljr5jovn0n"]
 
+[ext_resource type="Texture2D" uid="uid://bphwfqtsfwkcw" path="res://assets/Arrivée course.jpg" id="2_aq7ln"]
 [ext_resource type="Script" uid="uid://b8sydv64atuxq" path="res://scripts/DRIVE/finishDRIVE.gd" id="2_hylyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfw04"]
@@ -15,3 +16,6 @@ script = ExtResource("2_hylyy")
 shape = SubResource("RectangleShape2D_cfw04")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=136449344]
+position = Vector2(272, 0.2379942)
+scale = Vector2(0.5712568, 0.06306473)
+texture = ExtResource("2_aq7ln")

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bvcwmjxf7074o" path="res://scenes/PLAT/finishPLAT.tscn" id="4_mfc2s"]
 [ext_resource type="Texture2D" uid="uid://bcog3y5pqmrg0" path="res://assets/Trampoline.png" id="6_h6hl6"]
 [ext_resource type="Script" uid="uid://cm7e2316nutjg" path="res://scripts/PLAT/trampoline.gd" id="6_ru4ng"]
+[ext_resource type="Texture2D" uid="uid://be4ngs6fbhx77" path="res://assets/Fond plates-formes bon.jpg" id="8_r4uei"]
 [ext_resource type="PackedScene" uid="uid://beg1xf3t0xj7d" path="res://scenes/PLAT/MovingPlatform.tscn" id="8_ui7iq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ru4ng"]
@@ -120,7 +121,7 @@ scale = Vector2(0.042968757, 0.07026958)
 texture = ExtResource("2_mfc2s")
 
 [node name="Camera2D" type="Camera2D" parent="PlayerPLAT" unique_id=1715997286]
-position = Vector2(572, -69)
+position = Vector2(147, -1)
 
 [node name="Pause" parent="PlayerPLAT/Camera2D" unique_id=1264044334 instance=ExtResource("3_58rt4")]
 visible = false
@@ -367,6 +368,100 @@ script = ExtResource("6_ru4ng")
 position = Vector2(-0.00024414063, 122.879395)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_h6hl6")
+
+[node name="BG" type="Node2D" parent="LD" unique_id=338055576]
+z_index = -1
+
+[node name="BG_1" type="Sprite2D" parent="LD/BG" unique_id=719253593]
+position = Vector2(864, 0)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_2" type="Sprite2D" parent="LD/BG" unique_id=176235816]
+position = Vector2(2584, 0)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_3" type="Sprite2D" parent="LD/BG" unique_id=1836257141]
+position = Vector2(4302, 0)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_4" type="Sprite2D" parent="LD/BG" unique_id=344094063]
+position = Vector2(6022, 0)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_5" type="Sprite2D" parent="LD/BG" unique_id=997107621]
+position = Vector2(7734, -1.5)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_6" type="Sprite2D" parent="LD/BG" unique_id=830806188]
+position = Vector2(9454, -1.5)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_7" type="Sprite2D" parent="LD/BG" unique_id=305967510]
+position = Vector2(862.00006, -1800)
+rotation = 3.1415927
+texture = ExtResource("8_r4uei")
+
+[node name="BG_8" type="Sprite2D" parent="LD/BG" unique_id=2032556441]
+position = Vector2(2582, -1800)
+rotation = 3.1415927
+texture = ExtResource("8_r4uei")
+
+[node name="BG_9" type="Sprite2D" parent="LD/BG" unique_id=289117076]
+position = Vector2(4300, -1800)
+rotation = 3.1415927
+texture = ExtResource("8_r4uei")
+
+[node name="BG_10" type="Sprite2D" parent="LD/BG" unique_id=1451144451]
+position = Vector2(6020, -1800)
+rotation = 3.1415927
+texture = ExtResource("8_r4uei")
+
+[node name="BG_11" type="Sprite2D" parent="LD/BG" unique_id=287203067]
+position = Vector2(7732, -1801.5)
+rotation = 3.1415927
+texture = ExtResource("8_r4uei")
+
+[node name="BG_12" type="Sprite2D" parent="LD/BG" unique_id=1408806763]
+position = Vector2(9452, -1801.5)
+rotation = 3.1415927
+texture = ExtResource("8_r4uei")
+
+[node name="BG_13" type="Sprite2D" parent="LD/BG" unique_id=287851071]
+position = Vector2(864, 1744)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_19" type="Sprite2D" parent="LD/BG" unique_id=1318640187]
+position = Vector2(-856, 0)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_20" type="Sprite2D" parent="LD/BG" unique_id=792962446]
+position = Vector2(-857.99994, -1800)
+rotation = 3.1415927
+texture = ExtResource("8_r4uei")
+
+[node name="BG_21" type="Sprite2D" parent="LD/BG" unique_id=2070674406]
+position = Vector2(-856, 1744)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_14" type="Sprite2D" parent="LD/BG" unique_id=844512436]
+position = Vector2(2584, 1744)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_15" type="Sprite2D" parent="LD/BG" unique_id=331609538]
+position = Vector2(4302, 1744)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_16" type="Sprite2D" parent="LD/BG" unique_id=806718482]
+position = Vector2(6022, 1744)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_17" type="Sprite2D" parent="LD/BG" unique_id=1937030124]
+position = Vector2(7734, 1742.5)
+texture = ExtResource("8_r4uei")
+
+[node name="BG_18" type="Sprite2D" parent="LD/BG" unique_id=1373094576]
+position = Vector2(9454, 1742.5)
+texture = ExtResource("8_r4uei")
 
 [node name="FinishPlat" parent="." unique_id=138341825 instance=ExtResource("4_mfc2s")]
 position = Vector2(9496, -240.00003)
