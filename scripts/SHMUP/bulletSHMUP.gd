@@ -6,7 +6,9 @@ var target = "EnnemieArea"
 
 func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO
+	var norm = Vector2(-1,0)
 	dir = dir.normalized()
+	rotation = norm.angle_to(dir)
 	velocity = dir
 	
 	velocity = velocity.normalized() * speed
