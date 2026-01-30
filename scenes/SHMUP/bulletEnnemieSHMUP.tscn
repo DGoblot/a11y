@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dx2mpk27x8vsa"]
 
-[ext_resource type="Texture2D" uid="uid://xp26t3owgwf8" path="res://assets/Tir ennemi.PNG" id="1_w1k1g"]
+[ext_resource type="Texture2D" uid="uid://djpxm7jcfc0sy" path="res://assets/Tire ennemie v2.PNG" id="1_w1k1g"]
 [ext_resource type="Script" uid="uid://5qmw4mttg7ix" path="res://scripts/SHMUP/bulletSHMUP.gd" id="2_hovpn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_56sf0"]

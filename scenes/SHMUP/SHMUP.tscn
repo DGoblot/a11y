@@ -18,6 +18,7 @@ size = Vector2(128, 124)
 script = ExtResource("1_wf6it")
 ennemie_scene = ExtResource("2_1w5xt")
 finish_scene = ExtResource("3_h2vs3")
+finish_time = 30
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1545959630]
 position = Vector2(801, 452)
@@ -31,6 +32,7 @@ texture = ExtResource("5_cxlib")
 script = ExtResource("4_am2v4")
 keur_vide_texture = ExtResource("7_xmyqv")
 bullet_scene = ExtResource("6_0y3p6")
+speed = 500
 
 [node name="PlayerArea" type="Area2D" parent="PlayerSHMUP" unique_id=1051596637]
 
