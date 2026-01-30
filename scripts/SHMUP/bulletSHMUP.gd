@@ -1,13 +1,13 @@
 extends Sprite2D
 
 var speed = 1000
-var dir = 1
+var dir = Vector2(-1,0)
 var target = "EnnemieArea"
 
 func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO
-	
-	velocity.x += dir
+	dir = dir.normalized()
+	velocity = dir
 	
 	velocity = velocity.normalized() * speed
 

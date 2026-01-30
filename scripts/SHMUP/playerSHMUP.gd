@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed(&"Shoot"):
 		var bullet = bullet_scene.instantiate()
 		bullet.position = position
+		bullet.dir = Vector2(1,0)
 		bullets.add_child(bullet)
 	if Input.is_action_just_released(&"Switch"):
 		get_tree().change_scene_to_file("res://scenes/PLAT/PLAT.tscn")

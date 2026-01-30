@@ -2,11 +2,12 @@ extends Sprite2D
 
 @onready var parallax = $"../../Camera2D/BackgroundSHMUP/Parallax2D"
 @export var bullet_scene: PackedScene
+@onready var player = $"../../PlayerSHMUP"
 var speed
 var screen_size
 var hp = 2
 var bullet_time = false
-var shooting_time = 1
+@export var shooting_time = 1
 var shooting_timer = 0
 
 func _ready() -> void:
@@ -15,18 +16,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	speed = -parallax.autoscroll.x
 	var velocity = Vector2.ZERO
-	velocity.x -= 1
+	velocity.x = -1
 	velocity = velocity.normalized() * speed
 	position += velocity * delta
 	
 	if !bullet_time:
 		shooting_timer += delta
 		if(shooting_timer >= shooting_time):
-			var bullet = bullet_scene.instantiate()
-			bullet.position = position
-			bullet.dir = -1
-			bullet.target = "PlayerArea"
-			get_tree().get_root().get_node("SHMUP/Bullets").add_child(bullet)
+			if player.position.x + 100 < position.x:
+				var bullet = bullet_scene.instantiate()
+				bullet.position = position
+				bullet.dir = player.position - position
+				bullet.target = "PlayerArea"
+				get_tree().get_root().get_node("SHMUP/Bullets").add_child(bullet)
 			shooting_timer = 0
 	
 	if (hp <= 0):
