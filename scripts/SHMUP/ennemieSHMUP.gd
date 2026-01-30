@@ -5,6 +5,7 @@ extends Sprite2D
 var speed
 var screen_size
 var hp = 2
+var bullet_time = false
 var shooting_time = 1
 var shooting_timer = 0
 
@@ -18,14 +19,15 @@ func _process(delta: float) -> void:
 	velocity = velocity.normalized() * speed
 	position += velocity * delta
 	
-	shooting_timer += delta
-	if(shooting_timer >= shooting_time):
-		var bullet = bullet_scene.instantiate()
-		bullet.position = position
-		bullet.dir = -1
-		bullet.target = "PlayerArea"
-		get_tree().get_root().get_node("SHMUP/Bullets").add_child(bullet)
-		shooting_timer = 0
+	if !bullet_time:
+		shooting_timer += delta
+		if(shooting_timer >= shooting_time):
+			var bullet = bullet_scene.instantiate()
+			bullet.position = position
+			bullet.dir = -1
+			bullet.target = "PlayerArea"
+			get_tree().get_root().get_node("SHMUP/Bullets").add_child(bullet)
+			shooting_timer = 0
 	
 	if (hp <= 0):
 		queue_free()
